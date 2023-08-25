@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="em">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="=ie=edge">
+   <title>Admission into Aerospace Club</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+   <link rel="stylesheet" href="Aerospace club landing page.css">
+   <script src="Aerospace club landing page.js"></script>
+</head>
+
+<body>
+
+   <div class="background"></div>
+  
+<!-- <img class="logo" src="/CSS/Logo.jpg" alt="Logo">-->
+
+<div class="header">
+   <div class="logo">
+      <img src="Logo.jpg" alt="Club Logo">
+   </div>
+   <h1><em>Welcome to the Aerospace Club, OUTR</em></h1>
+   
+
+   <div class="social-icons">
+      <a href="https://www.linkedin.com/company/aerospacecetb/mycompany/" target="_blank">
+         <img class="social-icon" src="LinkedIn logo.png" alt="LinkedIn">
+      </a>
+      <a href="https://instagram.com/aerospace_outrb?igshid=MzRlODBiNWFlZA==" target="_blank">
+         <img class="social-icon" src="Insta logo.png" alt="Instagram">
+      </a>
+   <a href="https://www.youtube.com/@Aerospace_Club_OutrB/featured" target="_blank">
+      <img class="social-icon" src="youtube logo.jpg" alt="YouTube">
+   </a>
+      
+   </div>
+</div>
+
+   
+
+   <!--Navigation Bar-->
+   <nav>
+      <ul class="topnav" id="dropdownClick">
+          <li> <a href="#Home">Home</a></li>
+          <li> <a href="#news">News</a></li>
+          <li> <a href="#contact">Contact</a></li>
+          <li> <a href="#about">About</a></li>
+          <li class="topnav_right"> <a href="#signup">Sign up</a></li>
+          <li class="topnav_right"> <a href="#signin">Sign In</a></li>
+
+          <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li> <!--Web responsive trigram-->
+        
+      </ul>
+  </nav>
+
+   <div class="container">
+      <form action="/action_page.php" method="post" >
+         <fieldset class="info">
+            <legend class="lege"> Personal Information </legend>
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="Name">Name:</label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="text" name="myName" id="Name" placeholder="Enter your name"></input>
+               </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="myfile">Upload your recent picture:</label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="file" id="myfile" name="myfile">
+               </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="Branch">Branch:</label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="text" name="myBranch" id="Branch"></input>
+               </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="Registration Number">Registration Number:</label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="number" name="myRegistraion" id="Registration Number"></input>
+               </div>
+            </div>
+
+            <br>
+
+            <div>
+               <div class="col-25">
+                  <label class="info" for="Gender">Gender:</label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="radio" name="myGender" id="Gender"> Male </input>
+                  <input required type="radio" name="myGender" id="Gender"> Female </input>
+                  <input required type="radio" name="myGender" id="Gender"> Other </input>
+               </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="wpNumber"> WhatsApp Number: </label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input type="tel" name="myMobile" id="wpNumber" pattern="[0-9]{10}" required> </input>
+               </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="birthday"> Date of Birth: </label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="date" name="myBirthday" id="birthday"></input>
+               </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+               <div class="col-25">
+                  <label class="info" for="mail">Email Id:</label>
+               </div>
+               <br>
+               <div class="col-75">
+                  <input required type="email" name="myEmail" id="mail"></input>
+               </div>
+            </div>
+         </fieldset>
+
+
+
+         <br>
+         <div>
+            <label class="oinfo" for="cont">Are you a content writer ? :</label>
+            <input  type="checkbox" name="myContent" id="cont"> yes </input>
+         </div>
+         <br>
+         <div>
+            <label class="oinfo" for="des">Are you intrested for designing ?:</label>
+            <input  type="checkbox" name="myDesign" id="des"> yes </input>
+         </div>
+         <br>
+         <div>
+            <label class="oinfo" for="quiz">Will you want to make quizzes for the club in the weekends on various topics? :</label>
+            <input  type="checkbox" name="myQuiz" id="quiz"> yes </input>
+         </div>
+         <br>
+         <input class="button" type="submit" value="Launch the rocket">
+      </form>
+   </div>
+</body>
+
+</html>

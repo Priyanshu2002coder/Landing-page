@@ -1,0 +1,359 @@
+/*-----------------------------------------------------------------------------Defaults--------------------------------------------------------------------------------*/
+nav,
+header,
+footer 
+{
+  display: block;
+}
+
+/*-----------------------------------------------------------------------------Body basics------------------------------------------------------------------------------*/
+@font-face 
+{
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+body 
+{
+  background-image: url(space.png);
+  color: rgb(217, 228, 238);
+  margin: 0;
+  font-weight: bold;
+  font-family: myFirstFont;
+  box-sizing: border-box;
+  height: auto;
+  line-height: 1;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------------------Styling of the heading and logo-------------------------------------------------------------*/
+
+.header {
+  background-color: #333;
+  padding: 10px 0; /* Adjust vertical padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  background-image: url("milky-way.jpg");
+  font-size: 30px;
+  margin: 0;
+  position: relative;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 5px; /* Add padding around the text */
+}
+
+.logo 
+{
+  display: flex; /* Display the logo and text side by side */
+  align-items: center; /* Vertically align them in the middle */
+  width: auto; /* Allow the logo container to adjust its width */
+  
+}
+
+.logo img 
+{
+  width: 100%; /* Make the logo cover the entire width of its container */
+  height: 200px;
+}
+
+/* For screens up to 768px wide (mobile screens) */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: medium;
+  }
+  .logo img {
+    max-width: 80px;
+    height: auto;
+  }
+  .social-icon {
+    width: 20px; /* Adjust icon size for mobile */
+    height: 20px; /* Adjust icon size for mobile */
+  }
+}
+
+/* For screens wider than 768px (desktop screens) */
+@media (min-width: 769px) {
+  .social-icon {
+    width: 30px; /* Original icon size for desktop */
+    height: 30px; /* Original icon size for desktop */
+  }
+}
+
+/* Social media icons */
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px;
+}
+
+.social-icon {
+  filter: brightness(180%);
+}
+
+/*-------------------------------------------------------------------------------Navigation bar-----------------------------------------------------------------------*/
+
+/* nav bar basic design */
+nav 
+{
+  width: 100%;
+  margin: 0;
+}
+
+/* nav bar link design */
+
+nav ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #181818e8;
+  margin: 0;
+  position: relative;
+}
+
+/*nav bar link button orientation designs*/
+ul.topnav li 
+{
+  list-style: none;
+  float: left;
+}
+
+ul.topnav li.topnav_right 
+{
+  list-style: none;
+  float: right;
+}
+
+/* nav bar button designs */
+
+ul.topnav li a 
+{
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  min-height: 16px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #f70052;
+}
+
+/* nav bar hover effects */
+
+ul.topnav li a:hover 
+{
+  background-color: #0080ff59;
+  color: #fff;
+}
+
+/* nav bar dropdown trigram styling */
+
+li.dropdownIcon
+ {
+  display: none;
+}
+
+/*for mobile screen */
+
+@media screen and (max-width: 768px) {
+  ul.topnav li:not(:nth-child(1)) {
+    display: none;
+  }
+
+  ul.topnav li.dropdownIcon {
+    display: block;
+    float: right;
+  }
+
+  ul.topnav.responsive li.dropdownIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  ul.topnav.responsive  /*It works when mobile view is seen*/ {
+    position: relative; /*This ensures nav bar does not move up and down */
+  }
+
+  ul.topnav.responsive li {
+    display: inline; /*To make sure they are lined up like a span tag or lined up in a row*/
+    float: none; /*To overwrite the effect of float left*/
+  }
+  ul.topnav.responsive a {
+    display: block; /*so that it stacks over one another*/
+    text-align: left;
+  }
+}
+
+/*-----------------------------------------------------------------------------Forms styling--------------------------------------------------------------------------*/
+.info input[type="text"],
+.info input[type="number"],
+.info input[type="tel"],
+.info input[type="date"],
+.info input[type="email"],
+.info input[type="radio"],
+.info input[type="checkbox"],
+.info input[type="file"] 
+{
+   flex: 1;
+}
+/*Style for form fills with type text*/
+
+input[type="text"] 
+{
+  width: 25%;
+  padding: 1px 2px;
+  margin: 2px 3px;
+  overflow-x: scroll;
+  display: inline;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="text"]:focus 
+{
+  border: 3px solid #555;
+}
+
+input[type="text"]:hover 
+{
+  border: 3px solid #ec0606a4;
+}
+
+/*style for number type fills*/
+input[type="number"] 
+{
+  width: 25%;
+  padding: 1px 2px;
+  margin: 2px 3px;
+  overflow-x: scroll;
+  display: inline;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="number"]:focus 
+{
+  border: 3px solid #555;
+}
+
+input[type="number"]:hover 
+{
+  border: 3px solid #ec0606;
+}
+
+/*style for telephone number type fills*/
+input[type="tel"] 
+{
+  width: 25%;
+  padding: 1px 2px;
+  margin: 2px 3px;
+  overflow-x: scroll;
+  display: inline;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="tel"]:focus {
+  border: 3px solid #555;
+}
+
+input[type="tel"]:hover 
+{
+  border: 3px solid #ec0606;
+}
+
+/*style for submit buttons */
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #eb210b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #2309e8;
+}
+
+.button:active {
+  background-color: #0bddd3;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/*Font styles of information headings*/
+.lege {
+  color: #3b0303;
+  font-size: x-large;
+}
+
+.info {
+  color: #fcfcea;
+  font-size: larger;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.oinfo
+{
+  font-size: 20px;
+}
+
+
+/*--------------------------------------------------------------------Responsive layout  for submit button------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) 
+{
+  .col-25,
+  .col-75,
+  input[type="submit"] 
+  {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
